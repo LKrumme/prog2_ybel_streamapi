@@ -92,7 +92,7 @@ public class Main {
             BufferedReader r = new BufferedReader(new InputStreamReader(stream));
             return r.lines()
                 .filter(s  -> s.startsWith("a"))
-                .filter(s -> s.length() < 2)
+                .filter(s -> !(s.length() < 2))
                 .collect(Collectors.joining("\n"));
 
         } catch (IOException e) {
